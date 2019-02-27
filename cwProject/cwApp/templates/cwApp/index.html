@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+<!--on load display the html file-->
+<h1>Employee Application</h1>
+<form action="{% url 'index' %}" method="post">
+    {% csrf_token %}
+    <!--pull in the form from the views function else context-->
+    {{ newForm }}
+    <button>Submit</button>
+</form>
+
+</body>
+</html>
